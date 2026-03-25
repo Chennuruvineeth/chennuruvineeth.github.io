@@ -1,0 +1,83 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
+
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      margin: 5px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #049724;
+      color: white;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      text-decoration: none;
+      color: white;
+      background: #007bff;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    .color {
+      color: #898f89;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+      margin-top: 20px;
+    }
+
+  .profile-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
