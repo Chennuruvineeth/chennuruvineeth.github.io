@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Page</title>
-
-  <!-- Linking CSS -->
-  <link rel="stylesheet" href="index.css">
-</head>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Vineeth Reddy | Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="profile-container">
-  <img src="C:\Users\lekha\OneDrive\Desktop\my-website\Vineeth.jpeg" alt="Vineeth" class="profile-img">
-</div>
-</head>
 
-<Style>
-body {
+  <style>
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f6f9;
@@ -29,14 +17,6 @@ body {
       color: white;
       text-align: center;
       padding: 30px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    header p {
-      margin: 5px 0;
     }
 
     .container {
@@ -51,11 +31,6 @@ body {
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #333;
-      margin-bottom: 10px;
     }
 
     .skills span {
@@ -78,36 +53,47 @@ body {
       border-radius: 5px;
     }
 
-    .color {
-      color: #898f89;
+    .profile-container {
+      text-align: center;
+      margin-top: 20px;
     }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007bff;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
       background: #222;
       color: white;
-      margin-top: 20px;
     }
-
-  .profile-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #007bff;
-}
-
-</Style>
+        .social-icons a {
+        display: inline-block;
+        margin: 10px 10px 0 0;
+        text-decoration: none;
+        color: white;
+        background: #007bff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        }
+  </style>
+</head>
 
 <body>
+
+  <!-- Profile Image -->
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Vineeth" class="profile-img">
+  </div>
+
   <header>
     <h1>Vineeth Chennuru</h1>
-    <p>SAP Functional Analyst | Web Developer</p>
+    <p>SAP Functional Analyst</p>
   </header>
 
   <div class="container">
@@ -115,18 +101,10 @@ body {
     <div class="card">
       <h2>About Me</h2>
       <p>
-        <h4 class="color">Working as SAP Functional Analyst at IBM</h4>
-        <h5>Company: IBM</h5>
-        <h5>Project Details</h5>
-        <p>Jnj - Johnson and Johnson </p>
+        Working as SAP Functional Analyst at IBM.<br><br>
+
         SAP Functional Analyst with experience in analyzing business requirements and translating them into effective SAP solutions. 
-Skilled in understanding end-to-end business processes, requirement gathering, system configuration, and supporting business operations. 
-
-Experienced in working with cross-functional teams to improve process efficiency and ensure smooth system functionality. 
-Strong knowledge of SAP workflows, data handling, and issue resolution. 
-
-Focused on delivering scalable and reliable solutions that align with business needs. 
-Continuously learning and improving SAP expertise to stay updated with industry standards.
+        Skilled in understanding end-to-end business processes, requirement gathering, and system support.
       </p>
     </div>
 
@@ -134,42 +112,34 @@ Continuously learning and improving SAP expertise to stay updated with industry 
       <h2>Skills</h2>
       <div class="skills">
         <span>SAP ABAP</span>
-        <span>Service Now</span>
+        <span>ServiceNow</span>
         <span>BW HANA</span>
-        <span>WEB DEVELOPMENT</span>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>Projects</h2>
-      <p>✔ Personal Profile Website</p>
-      <p>✔ Learning Web Development Projects</p>
     </div>
 
     <div class="card contact">
       <h2>Contact</h2>
-      <a href="mailto:vithreddy927@gmail.com">Contact Me</a>
+      <a href="mailto:vithreddy927@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/chennuruvineeth927/" target="_blank">LinkedIn</a>
-      <a href="https://www.naukri.com/mnjuser/profile" target="_blank">Naukri</a>
+      <a href="https://www.naukri.com/" target="_blank">Naukri</a>
     </div>
-    <div>
-        
-    </div>
-</div>
+    <div class="card">
+        <h2>Social Media</h2>
 
-<script>
-function toggleDetails() {
-  var x = document.getElementById("contactDetails");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/17pCkitMbN/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/c_vineeth_reddy?igsh=MXJleHZ3czMwc251dA==" target="_blank">Instagram</a>
+            <a href="https://twitter.com/vineeth_chennuru" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+  </div>
+
+
 
   <footer>
     <p>© 2026 Vineeth Reddy</p>
+    
   </footer>
 
 </body>
