@@ -1,86 +1,27 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+
+  <!-- Linking CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Vineeth Reddy | Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-    }
-
-    header {
-      background: #007bff;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    header p {
-      margin: 5px 0;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 20px auto;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #28a745;
-      color: white;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 13px;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      text-decoration: none;
-      color: white;
-      background: #007bff;
-      padding: 8px 15px;
-      border-radius: 5px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #222;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+<div class="profile-container">
+  <img src="C:\Users\lekha\Downloads\Vineeth Image.jpeg" alt="Vineeth" class="profile-img">
+</div>
 </head>
 
 <body>
 
   <header>
-    <h1>Vineeth Reddy</h1>
-    <p>SAP Analyst | Web Developer</p>
+    <h1>Vineeth Chennuru</h1>
+    <p>SAP Functional Analyst | Web Developer</p>
   </header>
 
   <div class="container">
@@ -88,6 +29,10 @@
     <div class="card">
       <h2>About Me</h2>
       <p>
+        <h4 class="color">Working as SAP Functional Analyst at IBM</h4>
+        <h5>Company: IBM</h5>
+        <h5>Project Details</h5>
+        <p>Jnj - Johnson and Johnson </p>
         SAP Functional Analyst with experience in analyzing business requirements and translating them into effective SAP solutions. 
 Skilled in understanding end-to-end business processes, requirement gathering, system configuration, and supporting business operations. 
 
@@ -102,10 +47,10 @@ Continuously learning and improving SAP expertise to stay updated with industry 
     <div class="card">
       <h2>Skills</h2>
       <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>SAP</span>
+        <span>SAP ABAP</span>
+        <span>Service Now</span>
+        <span>BW HANA</span>
+        <span>WEB DEVELOPMENT</span>
       </div>
     </div>
 
@@ -119,9 +64,23 @@ Continuously learning and improving SAP expertise to stay updated with industry 
       <h2>Contact</h2>
       <a href="mailto:vithreddy927@gmail.com">Contact Me</a>
       <a href="https://www.linkedin.com/in/chennuruvineeth927/" target="_blank">LinkedIn</a>
+      <a href="https://www.naukri.com/mnjuser/profile" target="_blank">Naukri</a>
     </div>
+    <div>
+        
+    </div>
+</div>
 
-  </div>
+<script>
+function toggleDetails() {
+  var x = document.getElementById("contactDetails");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
   <footer>
     <p>© 2026 Vineeth Reddy</p>
