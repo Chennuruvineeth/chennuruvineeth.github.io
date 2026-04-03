@@ -15,168 +15,272 @@
   <link rel="icon" type="image/png" href="profile.jpeg">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    * /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      background: linear-gradient(90deg, #f8f6f6, #9f0c90);
-      
-    }
+/* Body Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  overflow-x: hidden;
+  position: relative;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      color: white;
-    }
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
 
-    .profile-img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 4px solid rgb(249, 248, 246);
-      object-fit: cover;
-      margin-top: 10px;
-      box-shadow: 0px 0px 100px 02px rgba(248, 246, 246, 0.842);
-      background-attachment: none;
-      image-rendering: auto;
-    }
+/* Profile Image */
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-top: 15px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
 
-    .contact-buttons {
-      margin-top: 15px;
-    }
+.profile-img:hover {
+  transform: scale(1.05);
+}
 
-    .contact-buttons a {
-      display: inline-block;
-      margin: 8px;
-      padding: 8px 15px;
-      background: white;
-      color: #764ba2;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 14px;  
-      transition: 0.3s;
-    }
+/* Buttons */
+.contact-buttons {
+  margin-top: 20px;
+}
 
-    .contact-buttons a:hover {
-      background: #764ba2;
-      color: white;
-    }
+.contact-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
 
-    .social-icons {
-      margin-top: 5px;
-    }
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 
-    .social-icons a {
-      margin: 10px;
-      font-size: 20px;
-      color: white;
-      background: rgba(39, 9, 41, 0.614);
-      padding: 10px;
-      border-radius: 50%;
-      transition: 0.3s;
-    }
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-    .social-icons a:hover {
-      background: white;
-      color: #764ba2;
-    }
+.contact-buttons a:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 00px;
-      margin-top: -40px;
-    }
+/* Light Sweep */
+.contact-buttons a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
 
-    .card {
-      background: rgb(235, 239, 239);
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(2, 10, 19, 0.913);
-      transition: 0.3s;
-      max-width: 900px;
-      margin: 20px auto;
-      transform: scale(0.95);  /* 1 = normal, 0 = slightly zoomed out */
-      transform-origin: top center;
-  
-    }
+.contact-buttons a:hover::before {
+  left: 100%;
+}
 
-    .card:hover {
-      transform: translateY(-15px);
-       
-    }
+/* Button Colors */
+.contact-buttons a:nth-child(1) {
+  background: linear-gradient(130deg, #0077b5, #0a0a0a);
+}
+.contact-buttons a:nth-child(2) {
+  background: linear-gradient(135deg, #0a0301, #478fe7);
+}
+.contact-buttons a:nth-child(3) {
+  background: linear-gradient(135deg, #0a0a0a, #0072ff);
+}
 
-    h2 {
-      margin-bottom: 10px;
-      color: #a263e1;
-    }
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+}
 
-    .skills span {
-      display: inline-block;
-      /* background: linear-gradient(45deg, #28a745, #159369); */
-      color: rgb(247, 245, 245);
-      /* padding: 8px 14px; */
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 13px;
-    }
-    .skills a:hover {
-      background: #933ceb;
-      color: rgb(245, 244, 244);
-      text-underline-offset: none;
-    }
-    .skills a {
-      display: inline-block;
-      margin: 8px;
-      padding: 8px 15px;
-      background: rgb(75, 74, 77);
-      color: #f2f0f4;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 14px;  
-      transition: 0.3s;
-    }
+.social-icons a {
+  margin: 10px;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  transition: 0.3s ease;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: white;
-    }
-    .social-icons a:nth-child(3):hover{
-     color: #01070b;
-    }
-  
+/* Instagram */
+.social-icons a:nth-child(1) {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
 
+/* Facebook */
+.social-icons a:nth-child(2) {
+  background: #1877f2;
+}
 
-    .company-logo {
-     width: 90px;
-     height: auto;
-     filter: grayscale(100%) brightness(0);
+/* Twitter (X) */
+.social-icons a:nth-child(3) {
+  background: #000000;
+}
 
-    }
+/* Hover Effects */
+.social-icons a:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: -30px;
+  padding: 10px;
+}
+
+/* Cards (Glass Effect) */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 900px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 10px;
+  color: #c084fc;
+}
+
+/* Skills */
+.skills a {
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.skills a:hover {
+  background: #933ceb;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Company Logo */
+.company-logo {
+  width: 90px;
+  filter: grayscale(100%) brightness(0) invert(1);
+}
+
+/* 3D Floating Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  animation: float 8s infinite ease-in-out;
+  z-index: 0;
+}
+
+.circle:nth-child(1) {
+  width: 220px;
+  height: 220px;
+  top: 8%;
+  left: 10%;
+}
+.circle:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: 5%;
+  right: 10%;
+  animation-delay: 2s;
+}
+.circle:nth-child(3) {
+  width: 160px;
+  height: 160px;
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 4s;
+}
+.circle:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 10%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+}
+
+/* Fix layering */
+header, .container, footer {
+  position: relative;
+  z-index: 1;
+}
 
   </style>
 </head>
 
 <body>
+  <div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 
 <header>
 
-  <h1> <a href="C:\Users\lekha\OneDrive\Desktop\my-website\index1.html"></a>Vineeth Reddy</h1>
+  <h1>Vineeth Reddy</h1>
   <p>SAP Functional Analyst <br><br><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="company-logo"></p>
 
   <img src="profile.jpeg" class="profile-img">
 
   <!-- Contact Buttons -->
   <div class="contact-buttons">
-    <a href="https://www.linkedin.com/in/chennuruvineeth927/" target="_blank">LinkedIn</a>
-    <a href="https://www.naukri.com/" target="_blank">Naukri</a>
-    <a href="mailto:vithreddy927@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/chennuruvineeth927/" target="_blank"><b>LinkedIn</b></a>
+    <a href="https://www.naukri.com/" target="_blank"><b>Naukri</b></a>
+    <a href="mailto:vithreddy927@gmail.com"><b>Email</b></a>
   </div>
 </header>
 
@@ -185,16 +289,15 @@
   <div class="card">
     <h2>About Me</h2>
     <p>
-      SAP Functional Analyst with experience in analyzing business requirements and delivering effective SAP solutions. 
-      Skilled in business process understanding, requirement gathering, and system support.
+      Currently working as a SAP Functional Analyst, with experience in analyzing business requirements and delivering effective SAP solutions. Skilled in business process understanding, requirement gathering, and system support. In addition, I am actively enhancing my technical expertise by learning <b>SAP ABAP</b>. Earlier in my career, I built a strong foundation in Java Full Stack technologies, including HTML, CSS, and SQL
     </p>
   </div>
 
   <div class="card">
     <h2>Experience</h2>
-    <p><b>Company:</b> <a href="https://www.ibm.com" target="_blank">IBM</a></p>
+    <p><b>Company:</b> <a href="https://www.ibm.com" target="_blank"><b style="color: rgb(10, 10, 11);">IBM</b></a></p>
     <p><b>Role:</b> SAP Functional Analyst</p>
-    <p><b>Project:</b> <a href="https://www.jnj.com/" target="_blank">Johnson & Johnson</a></p>
+    <p><b>Project:</b> <a href="https://www.jnj.com/" target="_blank"><b style="color: black;">Johnson & Johnson</b></a></p>
     <p><b>Duration:</b> 2024 - Present</p>
   </div>    
 
