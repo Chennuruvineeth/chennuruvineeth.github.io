@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vineeth Reddy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BACKGROUND - IT PORTAL STYLE */
+body {
+  background: #0b1120;
+  min-height: 100vh;
+  color: #e5e7eb;
+}
+
+/* GRID BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* GLOW LIGHT */
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: #2563eb;
+  filter: blur(150px);
+  top: 20%;
+  left: 20%;
+  opacity: 0.4;
+  animation: moveGlow 10s infinite alternate;
+}
+
+@keyframes moveGlow {
+  100% { transform: translate(100px, -50px); }
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  margin-top: 15px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* BUTTONS */
+.contact-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #1f2937;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:nth-child(1){background:#e1306c;}
+.social-icons a:nth-child(2){background:#1877f2;}
+.social-icons a:nth-child(3){background:#000;}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADINGS */
+h2 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+/* TABLE STYLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SKILLS */
+.skills a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 14px;
+  background: #1f2937;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.skills a:hover {
+  background: #2563eb;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Vineeth Reddy</h1>
+  <p>SAP Functional Analyst</p>
+
+  <div class="profile-img">
+    <img src="profile.jpeg">
+  </div>
+
+  <div class="contact-buttons">
+    <a href="#">LinkedIn</a>
+    <a href="#">Naukri</a>
+    <a href="#">Email</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      SAP Functional Analyst with experience in business analysis and SAP solutions.
+      Currently enhancing skills in SAP ABAP and system support.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Experience</h2>
+    <table class="table">
+      <tr><td><b>Company</b></td><td>IBM</td></tr>
+      <tr><td><b>Role</b></td><td>SAP Functional Analyst</td></tr>
+      <tr><td><b>Project</b></td><td>Johnson & Johnson</td></tr>
+      <tr><td><b>Duration</b></td><td>2024 - Present</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <a href="#">SAP ABAP</a>
+      <a href="#">ServiceNow</a>
+      <a href="#">BW HANA</a>
+      <a href="#">HTML</a>
+      <a href="#">CSS</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Vineeth Reddy</p>
+
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
